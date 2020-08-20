@@ -60,7 +60,7 @@ namespace PracticaCorta.Analizador
             }
             catch (Exception error)
             {
-                System.Windows.Forms.MessageBox.Show("ERROR: NO SE HA PODIDO ANALIZAR LA PALABRA O NÚMERO \n" + 
+                System.Windows.Forms.MessageBox.Show("ERROR LÉXICO: NO SE HA PODIDO ANALIZAR LA PALABRA O NÚMERO \n" + 
                     "ERROR: " + error.Message);
                 return palabras;
             }
