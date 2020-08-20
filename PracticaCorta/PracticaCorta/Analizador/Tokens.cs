@@ -12,13 +12,67 @@ namespace PracticaCorta.Analizador
         {
             if (comprobarNumero(letra))
                 return "NUMERO";
-            if (comprobarDecimal(letra))
+            else if (comprobarDecimal(letra))
                 return "DECIMAL";
-            if (comprobarPalabra(letra))
-                return "PALABRA";
+            else if (comprobarPalabra(letra))
+            {
+                if(letra == 'Q')
+                {
+                    return "MONEDA";
+                }else
+                    return "PALABRA";
+            }
+                
 
             return "";
 
+        }
+
+        public string checkNumber(char letra)
+        {
+            //Al haber analizado que es numero solo hay dos opciones, sigue siendo un entero o puede ser un decimal
+            if (comprobarNumero(letra))
+                return "NUMERO";
+            else if (comprobarDecimal(letra))
+                return "DECIMAL";
+
+            return "";
+        }
+
+        internal string checkDecimal(char letraAuxiliar)
+        {
+            //Al ya haber analizado el punto solo puede encontrar numero, si encuentra cualquier otro valor consideramos que ya no es decimal
+            if (comprobarNumeroParaDecimal(letraAuxiliar))
+                return "DECIMAL";
+
+
+            return "";
+        }
+
+        internal string checkPalabra(char letraAuxiliar)
+        {
+            if (comprobarPalabra(letraAuxiliar))
+            {
+                if (letraAuxiliar == 'Q')
+                {
+                    return "MONEDA";
+                }
+                else
+                    return "PALABRA";
+            }
+
+            return "";
+        }
+
+        internal string checkMoneda(char letraAuxiliar)
+        {
+            if (comprobarPalabra(letraAuxiliar))
+                return "PALABRA";
+            else if (comprobarNumero(letraAuxiliar))
+                return "MONEDA";
+            else if (comprobarDecimal(letraAuxiliar))
+                return "DECIMAL";
+            return "PALABRA";
         }
 
         private Boolean comprobarNumero(char letra)
@@ -30,6 +84,17 @@ namespace PracticaCorta.Analizador
             }
             return false;
         }
+
+        private Boolean comprobarNumeroParaDecimal(char letra)
+        {
+            if (letra == '1' || letra == '2' || letra == '3' || letra == '4' || letra == '5' || letra == '6' || letra == '7'
+                || letra == '8' || letra == '9')
+            {
+                return true;
+            }
+            return false;
+        }
+
 
         private Boolean comprobarDecimal(char letra)
         {
@@ -46,5 +111,7 @@ namespace PracticaCorta.Analizador
                     return true;
             return false;
         }
+
+        
     }
 }

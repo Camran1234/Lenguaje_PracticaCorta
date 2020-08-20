@@ -32,9 +32,10 @@ namespace PracticaCorta.Analizador
                     palabraAnalizada += palabra[indexPalabra];
                     analizado = true;
                 }
-                if(palabra[indexPalabra] == ' ' && analizado == true)
+                if(palabra[indexPalabra] == ' ' && analizado == true || indexPalabra == (palabra.Length-1))
                 {
                     palabras = this.AddPalabra(palabras, palabraAnalizada);
+                    palabraAnalizada = "";
                     analizado = false;
                 }
             }
