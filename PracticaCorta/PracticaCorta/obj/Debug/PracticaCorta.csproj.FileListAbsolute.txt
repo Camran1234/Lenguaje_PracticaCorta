@@ -1,0 +1,10 @@
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.csprojAssemblyReference.cache
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.Form1.resources
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.Properties.Resources.resources
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.csproj.GenerateResource.cache
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.csproj.CoreCompileInputs.cache
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\bin\Debug\PracticaCorta.exe.config
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\bin\Debug\PracticaCorta.exe
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\bin\Debug\PracticaCorta.pdb
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.exe
+D:\Documents\Carpetas\Universidad\Segundo semestre 2020\Lenguajes\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.pdb
