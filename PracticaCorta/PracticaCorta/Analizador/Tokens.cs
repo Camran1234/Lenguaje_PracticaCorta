@@ -10,8 +10,8 @@ namespace PracticaCorta.Analizador
     {
         public string checkNull(char letra)
         {
-            if (comprobarNumero(letra))
-                return "NUMERO";
+            if (comprobarENTERO(letra))
+                return "ENTERO";
             else if (comprobarDecimal(letra))
                 return "DECIMAL";
             else if (comprobarPalabra(letra))
@@ -30,9 +30,9 @@ namespace PracticaCorta.Analizador
 
         public string checkNumber(char letra)
         {
-            //Al haber analizado que es numero solo hay dos opciones, sigue siendo un entero o puede ser un decimal
-            if (comprobarNumero(letra))
-                return "NUMERO";
+            //Al haber analizado que es ENTERO solo hay dos opciones, sigue siendo un entero o puede ser un decimal
+            if (comprobarENTERO(letra))
+                return "ENTERO";
             else if (comprobarDecimal(letra))
                 return "DECIMAL";
 
@@ -41,8 +41,8 @@ namespace PracticaCorta.Analizador
 
         internal string checkDecimal(char letraAuxiliar)
         {
-            //Al ya haber analizado el punto solo puede encontrar numero, si encuentra cualquier otro valor consideramos que ya no es decimal
-            if (comprobarNumeroParaDecimal(letraAuxiliar))
+            //Al ya haber analizado el punto solo puede encontrar ENTERO, si encuentra cualquier otro valor consideramos que ya no es decimal
+            if (comprobarENTEROParaDecimal(letraAuxiliar))
                 return "DECIMAL";
 
 
@@ -68,14 +68,14 @@ namespace PracticaCorta.Analizador
         {
             if (comprobarPalabra(letraAuxiliar))
                 return "PALABRA";
-            else if (comprobarNumero(letraAuxiliar))
+            else if (comprobarENTERO(letraAuxiliar))
                 return "MONEDA";
             else if (comprobarDecimal(letraAuxiliar))
                 return "DECIMAL";
             return "PALABRA";
         }
 
-        private Boolean comprobarNumero(char letra)
+        private Boolean comprobarENTERO(char letra)
         {
             if (letra == '1' || letra == '2' || letra == '3' || letra == '4' || letra == '5' || letra == '6' || letra == '7'
                 || letra == '8' || letra == '9' || letra == '0')
@@ -85,7 +85,7 @@ namespace PracticaCorta.Analizador
             return false;
         }
 
-        private Boolean comprobarNumeroParaDecimal(char letra)
+        private Boolean comprobarENTEROParaDecimal(char letra)
         {
             if (letra == '1' || letra == '2' || letra == '3' || letra == '4' || letra == '5' || letra == '6' || letra == '7'
                 || letra == '8' || letra == '9')

@@ -61,7 +61,7 @@ namespace PracticaCorta.Analizador
                                 }
                                 break;
 
-                            case "NUMERO":
+                            case "ENTERO":
                                 token = analizador.checkNumber(letraAuxiliar);
 
                                 if (token.Equals("") || indexPalabra == (palabraAnalizada.Length - 1))
@@ -116,7 +116,7 @@ namespace PracticaCorta.Analizador
                                     }
                                     else if (letraAuxiliar != '0' && valorEnteros == 0)
                                     {
-                                        token = "NUMERO";
+                                        token = "ENTERO";
                                         tokens = this.addToken(tokens, token);
 
                                         if (indexPalabra != (palabraAnalizada.Length - 1))
@@ -137,9 +137,9 @@ namespace PracticaCorta.Analizador
                                 //Esta sentencia permite reconocer el cero cuando ya se halla terminado de leer la expresion
                                 if (letraAuxiliar == '0' && indexPalabra == (palabraAnalizada.Length - 1))
                                 {
-                                    //Depende de cuantos valores halla recorrido permitira saber si se queda como decimal o numero
+                                    //Depende de cuantos valores halla recorrido permitira saber si se queda como decimal o ENTERO
                                     if (valorEnteros == 0)
-                                        token = "NUMERO";
+                                        token = "ENTERO";
                                     else
                                         token = "DECIMAL";
 
